@@ -107,9 +107,9 @@ double sum(double arr[], const int size)
 	}
 	return sum;
 }
-string sum(char arr[], const int size)
+std::string sum(char arr[], const int size)
 {
-	string str;
+	std::string str;
 	for (int i = 0; i < size; i++)
 	{
 		str += arr[i];
