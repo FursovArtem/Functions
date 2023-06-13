@@ -109,12 +109,12 @@ double sum(double arr[], const int size)
 }
 std::string sum(char arr[], const int size)
 {
-	std::string str;
+	std::string sum;
 	for (int i = 0; i < size; i++)
 	{
-		str += arr[i];
+		sum += arr[i];
 	}
-	return str;
+	return sum;
 }
 
 double avg(int arr[], const int size)
