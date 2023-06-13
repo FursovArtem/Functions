@@ -20,7 +20,7 @@ void fill_rand(char arr[], const int size)
 {
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] = rand() % (93 - 65) + 65;
+		arr[i] = rand() % (93 - 65) + 65; //Английские буквы в верхнем регистре
 	}
 }
 
