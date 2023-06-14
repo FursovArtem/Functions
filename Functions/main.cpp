@@ -51,11 +51,11 @@ void main()
 	setlocale(LC_ALL, "");
 	int a, b;
 	char s;
-	cout << "Введите выражение: "; cin >> a;
+	cout << "Введите выражение: "; cin >> a >> s >> b;
 	try
 	{
-		//cout << a << " " << s << " " << b << " = " << calc(a, s, b) << endl;
-		cout << a << " ! = " << factorial(a) << endl;
+		cout << a << " " << s << " " << b << " = " << calc(a, s, b) << endl;
+		//cout << a << " ! = " << factorial(a) << endl;
 	}
 	catch (const char* error_message)
 	{

@@ -279,11 +279,9 @@ void main()
 	cout << "Сдвиг int влево на: "; cin >> sh;
 	shiftleft(arr_int, size, sh);
 	print(arr_int, size);
-
 	cout << "Сдвиг double влево на: "; cin >> sh;
 	shiftleft(arr_double, size, sh);
 	print(arr_double, size);
-
 	cout << "Сдвиг char влево на: "; cin >> sh;
 	shiftleft(arr_char, size, sh);
 	print(arr_char, size);
