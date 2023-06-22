@@ -28,6 +28,8 @@ void move(char field[], const int n, int player, int moves[])
 	int cell;
 	bool exists = false;
 	do {
+		if (player == 1)cout << "Player X moves" << endl;
+		else cout << "Player O moves" << endl;
 		cout << "Input cell number between 1 and 9: "; cin >> cell;
 		exists = find(moves, moves + n, cell) != moves + n;
 	} while (cell < 1 || cell > 9 || exists);
