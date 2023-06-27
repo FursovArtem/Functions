@@ -1,4 +1,4 @@
-//TicTacToe Recursion
+ï»¿//TicTacToe Recursion
 #include <iostream>
 #include <conio.h>
 using namespace std;
@@ -16,7 +16,7 @@ void main()
 	const int n = 9;
 	char field[n + 1] = "         ";
 	PrintField(field, n, '0');
-	cout << "Åùå ðàçî÷åê?\nÄà - Anykey\nÍåò - Escape" << endl;
+	cout << "Ð•Ñ‰Ðµ Ñ€Ð°Ð·Ð¾Ñ‡ÐµÐº?\nÐ”Ð° - Anykey\nÐÐµÑ‚ - Escape" << endl;
 	if (_getch() != 27)main();
 }
 
@@ -48,8 +48,8 @@ void move(char field[], const int n, char player)
 	do {
 		key = _getch();
 		if (key == 27)return;
-		if (key < '1' || key > '9')cout << "Error: âûõîä çà ïðåäåëû èãðîâîãî ïîëÿ!" << endl;
-		else if (field[key - 49] != ' ')cout << "Error: êëåòêà óæå çàíÿòà" << endl;
+		if (key < '1' || key > '9')cout << "Error: Ð²Ñ‹Ñ…Ð¾Ð´ Ð·Ð° Ð¿Ñ€ÐµÐ´ÐµÐ»Ñ‹ Ð¸Ð³Ñ€Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð¾Ð»Ñ!" << endl;
+		else if (field[key - 49] != ' ')cout << "Error: ÐºÐ»ÐµÑ‚ÐºÐ° ÑƒÐ¶Ðµ Ð·Ð°Ð½ÑÑ‚Ð°" << endl;
 	} while (key < '1' || key > '9' || field[key - 49] != ' ');
 	field[key - 49] = player;
 	/*if (player == 'X')PrintField(field, n, '0');
