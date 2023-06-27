@@ -1,15 +1,18 @@
 ﻿#include <iostream>
 using namespace std;
 
-void fill_rand(int arr[], const int size)
+template <typename T, typename U>
+void fill_rand(T arr[], U size)
 {
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] = rand() % 100;
+		arr[i] = rand() % 1000;
+		arr[i] /= 10;
 	}
 }
 
-void print(int arr[], const int size)
+template <typename T, typename U>
+void print(T arr[], U size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -18,7 +21,8 @@ void print(int arr[], const int size)
 	cout << endl;
 }
 
-void sort(int arr[], const int size)
+template <typename T, typename U>
+void sort(T arr[], U size)
 {
 	for (int i = 0; i < size - 1; i++)
 	{
@@ -32,9 +36,10 @@ void sort(int arr[], const int size)
 	}
 }
 
-int sum(int arr[], const int size)
+template <typename T, typename U>
+T sum(T arr[], U size)
 {
-	int sum = 0;
+	T sum = 0;
 	for (int i = 0; i < size; i++)
 	{
 		sum += arr[i];
@@ -42,14 +47,16 @@ int sum(int arr[], const int size)
 	return sum;
 }
 
-double avg(int arr[], const int size)
+template <typename T, typename U>
+double avg(T arr[], U size)
 {
 	return sum(arr, size) / (double)size;
 }
 
-int minvalue(int arr[], const int size)
+template <typename T, typename U>
+T minvalue(T arr[], U size)
 {
-	int min = arr[0];
+	T min = arr[0];
 	for (int i = 1; i < size; i++)
 	{
 		min > arr[i] ? min = arr[i] : NULL;
@@ -57,9 +64,10 @@ int minvalue(int arr[], const int size)
 	return min;
 }
 
-int maxvalue(int arr[], const int size)
+template <typename T, typename U>
+T maxvalue(T arr[], U size)
 {
-	int max = arr[0];
+	T max = arr[0];
 	for (int i = 1; i < size; i++)
 	{
 		max < arr[i] ? max = arr[i] : NULL;
@@ -67,7 +75,8 @@ int maxvalue(int arr[], const int size)
 	return max;
 }
 
-void shiftleft(int arr[], const int size, int shift)
+template <typename T, typename U>
+void shiftleft(T arr[], U size, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -78,7 +87,8 @@ void shiftleft(int arr[], const int size, int shift)
 	}
 }
 
-void shiftright(int arr[], const int size, int shift)
+template <typename T, typename U>
+void shiftright(T arr[], U size, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -93,35 +103,70 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	const int size = 10;
-	int arr[size]{};
+	int arr1[size]{};
+	double arr2[size]{};
+	char arr3[size]{};
 
 	cout << "Инициализация" << endl;
-	print(arr, size);
+	print(arr1, size);
+	print(arr2, size);
+	print(arr3, size);
 	cout << endl;
 
 	cout << "Заполнение рандомными числами" << endl;
-	fill_rand(arr, size);
-	print(arr, size);
+	fill_rand(arr1, size);
+	print(arr1, size);
+	fill_rand(arr2, size);
+	print(arr2, size);
+	fill_rand(arr3, size);
+	print(arr3, size);
 	cout << endl;
 
 	cout << "Сортировка" << endl;
-	sort(arr, size);
-	print(arr, size);
+	sort(arr1, size);
+	print(arr1, size);
+	sort(arr2, size);
+	print(arr2, size);
+	sort(arr3, size);
+	print(arr3, size);
 	cout << endl;
 
-	cout << "Сумма элементов = " << sum(arr, size) << endl;
-	cout << "Среднее арифметическое = " << avg(arr, size) << endl;
-	cout << "Минимальное значение: " << minvalue(arr, size) << endl;
-	cout << "Максимальное значение: " << maxvalue(arr, size) << endl;
+	cout << "Сумма элементов int = " << sum(arr1, size) << endl;
+	cout << "Сумма элементов double = " << sum(arr2, size) << endl;
+
+	cout << "Среднее арифметическое int = " << avg(arr1, size) << endl;
+	cout << "Среднее арифметическое double = " << avg(arr2, size) << endl;
+
+	cout << "Минимальное значение int: " << minvalue(arr1, size) << endl;
+	cout << "Минимальное значение double: " << minvalue(arr2, size) << endl;
+
+	cout << "Максимальное значение int: " << maxvalue(arr1, size) << endl;
+	cout << "Максимальное значение double: " << maxvalue(arr2, size) << endl;
 
 	int sh;
-	cout << "Сдвиг влево на: "; cin >> sh;
-	shiftleft(arr, size, sh);
-	print(arr, size);
+	cout << "Сдвиг int влево на: "; cin >> sh;
+	shiftleft(arr1, size, sh);
+	print(arr1, size);
+	cout << endl;
+	cout << "Сдвиг double влево на: "; cin >> sh;
+	shiftleft(arr2, size, sh);
+	print(arr2, size);
+	cout << endl;
+	cout << "Сдвиг char влево на: "; cin >> sh;
+	shiftleft(arr3, size, sh);
+	print(arr3, size);
 	cout << endl;
 
-	cout << "Сдвиг вправо на: "; cin >> sh;
-	shiftright(arr, size, sh);
-	print(arr, size);
+	cout << "Сдвиг int вправо на: "; cin >> sh;
+	shiftright(arr1, size, sh);
+	print(arr1, size);
+	cout << endl;
+	cout << "Сдвиг double вправо на: "; cin >> sh;
+	shiftright(arr2, size, sh);
+	print(arr2, size);
+	cout << endl;
+	cout << "Сдвиг char вправо на: "; cin >> sh;
+	shiftright(arr3, size, sh);
+	print(arr3, size);
 	cout << endl;
 }
