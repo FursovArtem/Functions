@@ -6,7 +6,7 @@
 #include "statistics.h"
 #include "shifts.h"
 
-void main()
+/*void main()
 {
 	setlocale(LC_ALL, "");
 	const int size = 10;
@@ -128,4 +128,4 @@ void main()
 	shiftright(arr_char_2d, size_1, size_2, sh);
 	print(arr_char_2d, size_1, size_2);
 	cout << endl;
-}
+}*/
