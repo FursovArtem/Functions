@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Functions.vcxproj", "{929DD9F2-9F47-4871-80F4-67865590045F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{BE893DD7-871F-445D-B46D-13E576B6A951}"
 EndProject
 Global
@@ -15,14 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Debug|x64.ActiveCfg = Debug|x64
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Debug|x64.Build.0 = Debug|x64
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Debug|x86.ActiveCfg = Debug|Win32
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Debug|x86.Build.0 = Debug|Win32
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Release|x64.ActiveCfg = Release|x64
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Release|x64.Build.0 = Release|x64
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Release|x86.ActiveCfg = Release|Win32
-		{929DD9F2-9F47-4871-80F4-67865590045F}.Release|x86.Build.0 = Release|Win32
 		{BE893DD7-871F-445D-B46D-13E576B6A951}.Debug|x64.ActiveCfg = Debug|x64
 		{BE893DD7-871F-445D-B46D-13E576B6A951}.Debug|x64.Build.0 = Debug|x64
 		{BE893DD7-871F-445D-B46D-13E576B6A951}.Debug|x86.ActiveCfg = Debug|Win32
