@@ -1,4 +1,4 @@
-#include <functions.h>
+ï»¿#include <functions.h>
 
 void main()
 {
@@ -8,13 +8,13 @@ void main()
 	double arr2[size]{};
 	char arr3[size]{};
 
-	cout << "Èíèöèàëèçàöèÿ" << endl;
+	cout << "Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ" << endl;
 	print(arr1, size);
 	print(arr2, size);
 	print(arr3, size);
 	cout << endl;
 
-	cout << "Çàïîëíåíèå ðàíäîìíûìè ÷èñëàìè" << endl;
+	cout << "Ð—Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ñ€Ð°Ð½Ð´Ð¾Ð¼Ð½Ñ‹Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð°Ð¼Ð¸" << endl;
 	fill_rand(arr1, size);
 	print(arr1, size);
 	fill_rand(arr2, size);
@@ -23,7 +23,7 @@ void main()
 	print(arr3, size);
 	cout << endl;
 
-	cout << "Ñîðòèðîâêà" << endl;
+	cout << "Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ°" << endl;
 	sort(arr1, size);
 	print(arr1, size);
 	sort(arr2, size);
@@ -32,41 +32,41 @@ void main()
 	print(arr3, size);
 	cout << endl;
 
-	cout << "Ñóììà ýëåìåíòîâ int = " << sum(arr1, size) << endl;
-	cout << "Ñóììà ýëåìåíòîâ double = " << sum(arr2, size) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² int = " << sum(arr1, size) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² double = " << sum(arr2, size) << endl;
 
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå int = " << avg(arr1, size) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå double = " << avg(arr2, size) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ int = " << avg(arr1, size) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ double = " << avg(arr2, size) << endl;
 
-	cout << "Ìèíèìàëüíîå çíà÷åíèå int: " << minvalue(arr1, size) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå double: " << minvalue(arr2, size) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ int: " << minvalue(arr1, size) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ double: " << minvalue(arr2, size) << endl;
 
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå int: " << maxvalue(arr1, size) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå double: " << maxvalue(arr2, size) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ int: " << maxvalue(arr1, size) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ double: " << maxvalue(arr2, size) << endl;
 
 	int sh;
-	cout << "Ñäâèã int âëåâî íà: "; cin >> sh;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ int Ð²Ð»ÐµÐ²Ð¾ Ð½Ð°: "; cin >> sh;
 	shiftleft(arr1, size, sh);
 	print(arr1, size);
 	cout << endl;
-	cout << "Ñäâèã double âëåâî íà: "; cin >> sh;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ double Ð²Ð»ÐµÐ²Ð¾ Ð½Ð°: "; cin >> sh;
 	shiftleft(arr2, size, sh);
 	print(arr2, size);
 	cout << endl;
-	cout << "Ñäâèã char âëåâî íà: "; cin >> sh;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ char Ð²Ð»ÐµÐ²Ð¾ Ð½Ð°: "; cin >> sh;
 	shiftleft(arr3, size, sh);
 	print(arr3, size);
 	cout << endl;
 
-	cout << "Ñäâèã int âïðàâî íà: "; cin >> sh;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ int Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð°: "; cin >> sh;
 	shiftright(arr1, size, sh);
 	print(arr1, size);
 	cout << endl;
-	cout << "Ñäâèã double âïðàâî íà: "; cin >> sh;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ double Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð°: "; cin >> sh;
 	shiftright(arr2, size, sh);
 	print(arr2, size);
 	cout << endl;
-	cout << "Ñäâèã char âïðàâî íà: "; cin >> sh;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ char Ð²Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð°: "; cin >> sh;
 	shiftright(arr3, size, sh);
 	print(arr3, size);
 	cout << endl;
