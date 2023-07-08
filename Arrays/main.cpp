@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 using namespace std;
 
+const int size_1 = 3, size_2 = 5;
+
 template <typename T>
 void fill_rand(T arr[], const int size)
 {
@@ -10,6 +12,18 @@ void fill_rand(T arr[], const int size)
 		arr[i] /= 10;
 	}
 }
+template <typename T>
+void fill_rand(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	for (int i = 0; i < size_1; i++)
+	{
+		for (int j = 0; j < size_2; j++)
+		{
+			arr[i][j] = rand() % 1000;
+			arr[i][j] /= 10;
+		}
+	}
+}
 
 template <typename T>
 void print(T arr[], const int size)
@@ -17,6 +31,19 @@ void print(T arr[], const int size)
 	for (int i = 0; i < size; i++)
 	{
 		cout << arr[i] << "\t";
+	}
+	cout << endl;
+}
+template <typename T>
+void print(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	for (int i = 0; i < size_1; i++)
+	{
+		for (int j = 0; j < size_2; j++)
+		{
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
 	}
 	cout << endl;
 }
@@ -35,6 +62,23 @@ void sort(T arr[], const int size)
 		}
 	}
 }
+template <typename T>
+void sort(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	for (int i = 0; i < size_1; i++)
+	{
+		for (int j = 0; j < size_2; j++)
+		{
+			for (int k = i; k < size_1; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < size_2; l++)
+				{
+					if (arr[k][l] < arr[i][j])swap(arr[k][l], arr[i][j]);
+				}
+			}
+		}
+	}
+}
 
 template <typename T>
 T sum(T arr[], const int size)
@@ -46,11 +90,29 @@ T sum(T arr[], const int size)
 	}
 	return sum;
 }
+template <typename T>
+T sum(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	T sum = 0;
+	for (int i = 0; i < size_1; i++)
+	{
+		for (int j = 0; j < size_2; j++)
+		{
+			sum += arr[i][j];
+		}
+	}
+	return sum;
+}
 
 template <typename T>
 double avg(T arr[], const int size)
 {
 	return sum(arr, size) / (double)size;
+}
+template <typename T>
+double avg(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	return sum(arr, size_1, size_2) / (double)(size_1 * size_2);
 }
 
 template <typename T>
@@ -63,6 +125,20 @@ T minvalue(T arr[], const int size)
 	}
 	return min;
 }
+template <typename T>
+T minvalue(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	T min = arr[0][0];
+	for (int i = 0; i < size_1; i++)
+	{
+		for (int j = 0; j < size_2; j++)
+		{
+			min > arr[i][j] ? min = arr[i][j] : NULL;
+		}
+	}
+	return min;
+}
+
 
 template <typename T>
 T maxvalue(T arr[], const int size)
@@ -71,6 +147,19 @@ T maxvalue(T arr[], const int size)
 	for (int i = 1; i < size; i++)
 	{
 		max < arr[i] ? max = arr[i] : NULL;
+	}
+	return max;
+}
+template <typename T>
+T maxvalue(T arr[size_1][size_2], const int size_1, const int size_2)
+{
+	T max = arr[0][0];
+	for (int i = 0; i < size_1; i++)
+	{
+		for (int j = 0; j < size_2; j++)
+		{
+			max < arr[i][j] ? max = arr[i][j] : NULL;
+		}
 	}
 	return max;
 }
@@ -86,6 +175,20 @@ void shiftleft(T arr[], const int size, int shift)
 		}
 	}
 }
+template <typename T>
+void shiftleft(T arr[size_1][size_2], const int size_1, const int size_2, int shift)
+{
+	for (int i = 0; i < shift; i++)
+	{
+		for (int j = 0; j < size_1; j++)
+		{
+			for (int k = 0; k < size_2 - 1; k++)
+			{
+				swap(arr[j][k], arr[j][k + 1]);
+			}
+		}
+	}
+}
 
 template <typename T>
 void shiftright(T arr[], const int size, int shift)
@@ -95,6 +198,20 @@ void shiftright(T arr[], const int size, int shift)
 		for (int j = size - 1; j > 0; j--)
 		{
 			swap(arr[j], arr[j - 1]);
+		}
+	}
+}
+template <typename T>
+void shiftright(T arr[size_1][size_2], const int size_1, const int size_2, int shift)
+{
+	for (int i = 0; i < shift; i++)
+	{
+		for (int j = size_1 - 1; j >= 0; j--)
+		{
+			for (int k = size_2 - 2; k >= 0; k--)
+			{
+				swap(arr[j][k], arr[j][k + 1]);
+			}
 		}
 	}
 }
