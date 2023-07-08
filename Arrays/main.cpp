@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 using namespace std;
 
+const int size_1 = 3, size_2 = 5;
+
 void fill_rand(int arr[], const int size)
 {
 	for (int i = 0; i < size; i++)
@@ -23,7 +25,7 @@ void fill_rand(char arr[], const int size)
 		arr[i] = rand() % (93 - 65) + 65; //Английские буквы в верхнем регистре
 	}
 }
-void fill_rand(int arr[][5], const int size_1, const int size_2)
+void fill_rand(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -33,7 +35,7 @@ void fill_rand(int arr[][5], const int size_1, const int size_2)
 		}
 	}
 }
-void fill_rand(double arr[][5], const int size_1, const int size_2)
+void fill_rand(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -44,7 +46,7 @@ void fill_rand(double arr[][5], const int size_1, const int size_2)
 		}
 	}
 }
-void fill_rand(char arr[][5], const int size_1, const int size_2)
+void fill_rand(char arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -79,7 +81,7 @@ void print(char arr[], const int size)
 	}
 	cout << endl;
 }
-void print(int arr[][5], const int size_1, const int size_2)
+void print(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -91,7 +93,7 @@ void print(int arr[][5], const int size_1, const int size_2)
 	}
 	cout << endl;
 }
-void print(double arr[][5], const int size_1, const int size_2)
+void print(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -103,7 +105,7 @@ void print(double arr[][5], const int size_1, const int size_2)
 	}
 	cout << endl;
 }
-void print(char arr[][5], const int size_1, const int size_2)
+void print(char arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -155,7 +157,7 @@ void sort(char arr[], const int size)
 		}
 	}
 }
-void sort(int arr[][5], const int size_1, const int size_2)
+void sort(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -171,7 +173,7 @@ void sort(int arr[][5], const int size_1, const int size_2)
 		}
 	}
 }
-void sort(double arr[][5], const int size_1, const int size_2)
+void sort(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -187,7 +189,7 @@ void sort(double arr[][5], const int size_1, const int size_2)
 		}
 	}
 }
-void sort(char arr[][5], const int size_1, const int size_2)
+void sort(char arr[size_1][size_2], const int size_1, const int size_2)
 {
 	for (int i = 0; i < size_1; i++)
 	{
@@ -231,7 +233,7 @@ std::string sum(char arr[], const int size)
 	}
 	return sum;
 }
-int sum(int arr[][5], const int size_1, const int size_2)
+int sum(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	int sum = 0;
 	for (int i = 0; i < size_1; i++)
@@ -243,7 +245,7 @@ int sum(int arr[][5], const int size_1, const int size_2)
 	}
 	return sum;
 }
-double sum(double arr[][5], const int size_1, const int size_2)
+double sum(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	double sum = 0;
 	for (int i = 0; i < size_1; i++)
@@ -255,7 +257,7 @@ double sum(double arr[][5], const int size_1, const int size_2)
 	}
 	return sum;
 }
-std::string sum(char arr[][5], const int size_1, const int size_2)
+std::string sum(char arr[size_1][size_2], const int size_1, const int size_2)
 {
 	std::string sum;
 	for (int i = 0; i < size_1; i++)
@@ -276,11 +278,11 @@ double avg(double arr[], const int size)
 {
 	return sum(arr, size) / (double)size;
 }
-double avg(int arr[][5], const int size_1, const int size_2)
+double avg(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	return sum(arr, size_1, size_2) / (double)(size_1 * size_2);
 }
-double avg(double arr[][5], const int size_1, const int size_2)
+double avg(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	return sum(arr, size_1, size_2) / (double)(size_1 * size_2);
 }
@@ -303,7 +305,7 @@ double minvalue(double arr[], const int size)
 	}
 	return min;
 }
-int minvalue(int arr[][5], const int size_1, const int size_2)
+int minvalue(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	int min = arr[0][0];
 	for (int i = 0; i < size_1; i++)
@@ -315,7 +317,7 @@ int minvalue(int arr[][5], const int size_1, const int size_2)
 	}
 	return min;
 }
-double minvalue(double arr[][5], const int size_1, const int size_2)
+double minvalue(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	double min = arr[0][0];
 	for (int i = 0; i < size_1; i++)
@@ -346,7 +348,7 @@ double maxvalue(double arr[], const int size)
 	}
 	return max;
 }
-int maxvalue(int arr[][5], const int size_1, const int size_2)
+int maxvalue(int arr[size_1][size_2], const int size_1, const int size_2)
 {
 	int max = arr[0][0];
 	for (int i = 0; i < size_1; i++)
@@ -358,7 +360,7 @@ int maxvalue(int arr[][5], const int size_1, const int size_2)
 	}
 	return max;
 }
-double maxvalue(double arr[][5], const int size_1, const int size_2)
+double maxvalue(double arr[size_1][size_2], const int size_1, const int size_2)
 {
 	double max = arr[0][0];
 	for (int i = 0; i < size_1; i++)
@@ -401,7 +403,7 @@ void shiftleft(char arr[], const int size, int shift)
 		}
 	}
 }
-void shiftleft(int arr[][5], const int size_1, const int size_2, int shift)
+void shiftleft(int arr[size_1][size_2], const int size_1, const int size_2, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -414,7 +416,7 @@ void shiftleft(int arr[][5], const int size_1, const int size_2, int shift)
 		}
 	}
 }
-void shiftleft(double arr[][5], const int size_1, const int size_2, int shift)
+void shiftleft(double arr[size_1][size_2], const int size_1, const int size_2, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -427,7 +429,7 @@ void shiftleft(double arr[][5], const int size_1, const int size_2, int shift)
 		}
 	}
 }
-void shiftleft(char arr[][5], const int size_1, const int size_2, int shift)
+void shiftleft(char arr[size_1][size_2], const int size_1, const int size_2, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -471,7 +473,7 @@ void shiftright(char arr[], const int size, int shift)
 		}
 	}
 }
-void shiftright(int arr[][5], const int size_1, const int size_2, int shift)
+void shiftright(int arr[size_1][size_2], const int size_1, const int size_2, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -484,7 +486,7 @@ void shiftright(int arr[][5], const int size_1, const int size_2, int shift)
 		}
 	}
 }
-void shiftright(double arr[][5], const int size_1, const int size_2, int shift)
+void shiftright(double arr[size_1][size_2], const int size_1, const int size_2, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -497,7 +499,7 @@ void shiftright(double arr[][5], const int size_1, const int size_2, int shift)
 		}
 	}
 }
-void shiftright(char arr[][5], const int size_1, const int size_2, int shift)
+void shiftright(char arr[size_1][size_2], const int size_1, const int size_2, int shift)
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -518,7 +520,6 @@ void main()
 	int arr_int[size]{};
 	double arr_double[size]{};
 	char arr_char[size]{};
-	const int size_1 = 3, size_2 = 5;
 	int arr_int_2d[size_1][size_2]{};
 	double arr_double_2d[size_1][size_2]{};
 	char arr_char_2d[size_1][size_2]{};
